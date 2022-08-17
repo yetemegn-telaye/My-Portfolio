@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    align-items: center;
+    height: 4rem;
+    max-width: 100%;
+    background-color: #3E3C3C;
+    color: white;
+    font-family: "Inter";
+    font-style: normal;
+}
+nav p{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+.nav-links{
+    display: none;
+    
+}
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.938rem;
+    font-weight: 600;
+}
+@media  screen and (min-width: 800px){
+    .nav-links{
+        display: flex;
+        width: 25%;
+        justify-content: space-around;
+        padding: 2px;
+    }
+    #toggle-btn{
+        display: none;
+    }
+}
+
+.nav-links a:hover{
+    color: #FFF5E1;
+}
+.nav-links a:active{
+    color: #E05304;
+}
