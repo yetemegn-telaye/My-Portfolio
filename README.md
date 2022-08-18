@@ -6,20 +6,11 @@
 
 ## Built With
 
-- Major languages: Html, CSS
-- Frameworks
-- Technologies used
+Html, CSS
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
-
-
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
@@ -35,8 +26,6 @@ To get a local copy up and running follow these simple example steps.
 
 ### Deployment
 
-
-
 ## Authors
 
 👤 **Yetemegn Lemma**
@@ -44,7 +33,6 @@ To get a local copy up and running follow these simple example steps.
 - GitHub: [@githubhandle](https://github.com/yetemegn-telaye)
 - Twitter: [@twitterhandle](https://twitter.com/Yetemegn19)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/yetemegn-telaye-81370920a/)
-
 
 ## 🤝 Contributing
 
