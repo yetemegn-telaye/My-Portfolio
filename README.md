@@ -16,19 +16,6 @@ none
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-## Authors
 
 👤 **Yetemegn Lemma**
 
@@ -45,6 +32,7 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
 
 ## 📝 License
 
