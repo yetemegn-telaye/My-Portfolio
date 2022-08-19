@@ -186,7 +186,7 @@ hr {
   gap: 44px;
 }
 
-.about-tech-list .list-title {
+.about-tech-list ul {
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
