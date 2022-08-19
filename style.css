@@ -183,13 +183,13 @@ hr {
   flex-direction: column;
   align-items: center;
   padding-top: 70px;
-  gap: 44px;
+  gap: 20px;
 }
 
-.about-tech-list ul {
+.about-tech-list h4 {
   font-weight: 700;
   font-size: 32px;
-  line-height: 44px;
+  line-height: 49px;
 }
 
 .about-content ul {
