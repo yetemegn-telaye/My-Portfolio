@@ -186,7 +186,7 @@ hr {
   gap: 44px;
 }
 
-.about-tech-list h4 {
+.about-tech-list .list-title {
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
@@ -248,6 +248,10 @@ hr {
   background-position: center;
   min-height: 237px;
   margin-bottom: 12px;
+}
+
+#first-card-img img {
+  display: none;
 }
 
 .first-card-desc {
