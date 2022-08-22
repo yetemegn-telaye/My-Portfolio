@@ -273,10 +273,21 @@ hr {
   padding: 12px 0;
 }
 
-.card-tags {
+/* .card-tags {
+  
   display: flex;
   justify-content: space-between;
   padding-bottom: 12px;
+   
+} */
+
+.card-tags {
+  margin-bottom: 22px;
+}
+
+.card-tags li{
+ float: left;
+ margin-right: 12px;
 }
 
 .common-btn {
