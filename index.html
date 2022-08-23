@@ -240,10 +240,11 @@
             />Frameworks
           </h4>
           <ul>
-            <li>Javascript</li>
-            <li>Ruby</li>
-            <li>Html</li>
-            <li>Css</li>
+            <li>Bootstrap</li>
+            <li>Ruby on Rails</li>
+            <li>RSPec</li>
+            <li>CapyBara</li>
+            <li>Selenuim</li>
           </ul>
           <h4>
             <img
@@ -253,54 +254,44 @@
             />Skills
           </h4>
           <ul>
-            <li>Javascript</li>
-            <li>Ruby</li>
-            <li>Html</li>
-            <li>Css</li>
+            <li>Codekit</li>
+            <li>Github</li>
+            <li>Codepen</li>
+            <li>Gitlab</li>
+            <li>Terminal</li>
           </ul>
         </div>
       </section>
 
-      <section class="form-section">
-                  <h3 class="contact-form-text">
+      <section class="footer-section">
+        <div class="form-section">
+          <h3 class="contact-form-text">
             I'm always interested in hearing about new projects, so if you'd
             like to chat please get in touch.
-          </h3>
-        <form
-          action="https://formspree.io/f/mgeqvoyy"
-          method="post" 
-       class="contact-form" >
-          
-          <ul>
-            <li>
-              <input
+        </h3>
+        <form action="https://formspree.io/f/mgeqvoyy" method="POST" class="contact-form" >
+          <input
                 type="text"
-                name="full-name"
-                placeholder="Full Name"
-                required
-              />
-            </li>
-            <li>
+                name="name"
+                placeholder="Full name"
+                maxlength="30"
+                required/>
               <input
                 type="email"
                 name="email"
                 placeholder="Email Address"
-                required
-              />
-            </li>
-          </ul>
+                required />
           <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="10"
+            name="message"
+            rows="4"
             placeholder="Write your message here"
             max="500"
-            min="500"
             required
           ></textarea>
           <button type="submit" class="common-btn">Get in touch</button>
         </form>
+        </div>
+        
       </section>
     </main>
   </body>
