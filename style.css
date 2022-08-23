@@ -326,6 +326,24 @@ hr {
   color: #5b5957;
 }
 
+/* contact-form */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+
+}
+
 /* desktop version */
 @media screen and (min-width: 800px) {
   .nav-links {
