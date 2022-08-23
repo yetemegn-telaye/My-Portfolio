@@ -14,7 +14,7 @@ header {
   height: 4rem;
   background-color: #3e3c3c;
   color: white;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
 }
 
@@ -31,7 +31,7 @@ header #logo-title {
 }
 
 .about-tech-list li {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   list-style-type: none;
   text-align: center;
   font-size: 22px;
@@ -101,21 +101,21 @@ header #logo-title {
 
 .header-intro h1 {
   color: #f55800;
-  font-family: 'Crete Round', serif;
+  font-family: "Crete Round", serif;
   font-weight: 400;
   line-height: 82px;
   font-size: 72px;
 }
 
 .header-intro .sub-title {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 44px;
 }
 
 .header-intro p {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -148,7 +148,7 @@ hr {
 }
 
 .about-content h2 {
-  font-family: 'Crete Round', serif;
+  font-family: "Crete Round", serif;
   font-weight: 400;
   font-size: 72px;
   line-height: 88px;
@@ -157,7 +157,7 @@ hr {
 }
 
 .about-content p {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -202,7 +202,7 @@ hr {
 }
 
 .work-section h2 {
-  font-family: 'Crete Round', serif;
+  font-family: "Crete Round", serif;
   font-size: 40px;
   font-weight: 400;
   line-height: 52px;
@@ -218,7 +218,7 @@ hr {
 }
 
 .work-card-item {
-  background-image: url('images/works-images/carditem-img.png');
+  background-image: url("images/works-images/carditem-img.png");
   background-position: center;
   max-height: 435px;
   padding-top: 84px;
@@ -226,7 +226,7 @@ hr {
 }
 
 .work-card-item h4 {
-  font-family: 'Crete Round', serif;
+  font-family: "Crete Round", serif;
   font-weight: 400;
   font-size: 32px;
   line-height: 44px;
@@ -235,7 +235,7 @@ hr {
 }
 
 .work-card-item p {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -243,7 +243,7 @@ hr {
 }
 
 #first-card-img {
-  background-image: url('images/works-images/ImgPlaceholder.png');
+  background-image: url("images/works-images/ImgPlaceholder.png");
   background-repeat: no-repeat;
   background-position: center;
   min-height: 237px;
@@ -259,14 +259,14 @@ hr {
 }
 
 .first-card-desc h4 {
-  font-family: 'Crete Round', serif;
+  font-family: "Crete Round", serif;
   font-weight: 400;
   font-size: 32px;
   line-height: 44px;
 }
 
 .first-card-desc p {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 24px;
   font-size: 16px;
   font-weight: 400;
@@ -346,7 +346,7 @@ hr {
 /* mobile version */
 @media screen and (max-width: 800px) {
   .headline-section {
-    background-image: url('images/Illustration-header.png');
+    background-image: url("images/Illustration-header.png");
     background-position: 205px 340px;
     background-size: 312px 406px;
     background-repeat: no-repeat;
