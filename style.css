@@ -14,7 +14,7 @@ header {
   height: 4rem;
   background-color: #3e3c3c;
   color: white;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
 }
 
@@ -31,7 +31,7 @@ header #logo-title {
 }
 
 .about-tech-list li {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   list-style-type: none;
   text-align: center;
   font-size: 22px;
@@ -101,21 +101,21 @@ header #logo-title {
 
 .header-intro h1 {
   color: #f55800;
-  font-family: 'Crete Round', serif;
+  font-family: "Crete Round", serif;
   font-weight: 400;
   line-height: 82px;
   font-size: 72px;
 }
 
 .header-intro .sub-title {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 44px;
 }
 
 .header-intro p {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -148,7 +148,7 @@ hr {
 }
 
 .about-content h2 {
-  font-family: 'Crete Round', serif;
+  font-family: "Crete Round", serif;
   font-weight: 400;
   font-size: 72px;
   line-height: 88px;
@@ -157,7 +157,7 @@ hr {
 }
 
 .about-content p {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -182,7 +182,7 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 70px;
+  margin: 130px 0;
   gap: 20px;
 }
 
@@ -202,7 +202,7 @@ hr {
 }
 
 .work-section h2 {
-  font-family: 'Crete Round', serif;
+  font-family: "Crete Round", serif;
   font-size: 40px;
   font-weight: 400;
   line-height: 52px;
@@ -218,7 +218,7 @@ hr {
 }
 
 .work-card-item {
-  background-image: url('images/works-images/carditem-img.png');
+  background-image: url("images/works-images/carditem-img.png");
   background-position: center;
   max-height: 435px;
   padding-top: 84px;
@@ -226,7 +226,7 @@ hr {
 }
 
 .work-card-item h4 {
-  font-family: 'Crete Round', serif;
+  font-family: "Crete Round", serif;
   font-weight: 400;
   font-size: 32px;
   line-height: 44px;
@@ -235,7 +235,7 @@ hr {
 }
 
 .work-card-item p {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -243,7 +243,7 @@ hr {
 }
 
 #first-card-img {
-  background-image: url('images/works-images/ImgPlaceholder.png');
+  background-image: url("images/works-images/ImgPlaceholder.png");
   background-repeat: no-repeat;
   background-position: center;
   min-height: 237px;
@@ -259,14 +259,14 @@ hr {
 }
 
 .first-card-desc h4 {
-  font-family: 'Crete Round', serif;
+  font-family: "Crete Round", serif;
   font-weight: 400;
   font-size: 32px;
   line-height: 44px;
 }
 
 .first-card-desc p {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 24px;
   font-size: 16px;
   font-weight: 400;
@@ -326,6 +326,68 @@ hr {
   color: #5b5957;
 }
 
+/* contact-form */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 120px 24px;
+}
+
+.form-section h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  color: #172b4d;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  min-width: 100%;
+}
+
+.contact-form input {
+  border: none;
+  border-bottom: 1px solid #dbd8d7;
+  min-width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  line-height: 24px;
+  font-family: 'Inter', sans-serif;
+}
+
+.contact-form textarea {
+  min-width: 100%;
+  border: none;
+  background-color: #fbf8f7;
+  padding: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #3c3a39;
+}
+
+/* Footer section social icons */
+.footer-social-icons {
+  border-top: 1px solid #dfe1e6;
+  padding: 25px 100px;
+}
+
+.footer-social-icons ul {
+  display: flex;
+}
+
+.footer-social-icons ul li {
+  list-style-type: none;
+}
+
 /* desktop version */
 @media screen and (min-width: 800px) {
   .nav-links {
@@ -346,9 +408,8 @@ hr {
 /* mobile version */
 @media screen and (max-width: 800px) {
   .headline-section {
-    background-image: url('images/Illustration-header.png');
-    background-position: 205px 340px;
-    background-size: 312px 406px;
+    background-image: url("images/Illustration-header-mobile.svg");
+    background-position: 230px 310px;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column-reverse;
