@@ -329,16 +329,15 @@ hr {
 /* contact-form */
 .form-section {
   display: flex;
-  max-width: 100%;
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  margin: 120px 24px;
+  padding: 120px 24px;
 }
 
 .form-section h3 {
   font-family: 'Inter', sans-serif;
-  font-family: 700;
+  font-weight: 700;
   font-size: 32px;
   line-height: 44px;
   text-align: center;
@@ -369,9 +368,28 @@ hr {
   background-color: #fbf8f7;
   padding: 12px;
   font-family: 'Inter', sans-serif;
+  font-weight: 400px;
   font-size: 15px;
   line-height: 24px;
   color: #3c3a39;
+}
+
+/* Footer section social icons */
+.footer-social-icons {
+  border-top: 1px solid #dfe1e6;
+  padding: 25px 100px;
+}
+
+.footer-social-icons ul {
+  display: flex;
+}
+
+.footer-social-icons ul li {
+  list-style-type: none;
+}
+
+.footer-social-icons ul li img {
+  color: black;
 }
 
 /* desktop version */
@@ -394,9 +412,8 @@ hr {
 /* mobile version */
 @media screen and (max-width: 800px) {
   .headline-section {
-    background-image: url("images/Illustration-header.png");
-    background-position: 205px 340px;
-    background-size: 312px 406px;
+    background-image: url("images/Illustration-header-mobile.svg");
+    background-position: 230px 310px;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column-reverse;
