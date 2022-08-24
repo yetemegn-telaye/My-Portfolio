@@ -388,10 +388,6 @@ hr {
   list-style-type: none;
 }
 
-.footer-social-icons ul li img {
-  color: black;
-}
-
 /* desktop version */
 @media screen and (min-width: 800px) {
   .nav-links {
