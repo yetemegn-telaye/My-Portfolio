@@ -460,6 +460,17 @@ hr {
     font-size: 20px;
   }
 
+  .first-card .card-tags {
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .first-card .card-tags li {
+    margin-left: 0;
+    margin-right: 2px;
+  }
+
   #active-card {
     background-image: url("images/works-images/active-card.svg");
     background-repeat: no-repeat;
@@ -494,6 +505,15 @@ hr {
 
   .work-card-item .card-tags {
     gap: 12px;
+    margin-left: 12px;
+    margin-right: 0.5rem;
+  }
+
+  .work-card-item .card-tags li {
+    background: rgba(255, 255, 255, 0.24);
+    color: white;
+    border: none;
+    padding: 10px 12px;
   }
 
   #active-card .card-tags {
