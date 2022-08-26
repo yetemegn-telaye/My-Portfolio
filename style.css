@@ -408,6 +408,11 @@ hr {
     display: none;
   }
 
+  .social-icons ul li:hover {
+    transform: scale(1.4);
+    transition: all 0.3s;
+  }
+
   .work-section {
     margin-left: 38px;
     margin-right: 38px;
