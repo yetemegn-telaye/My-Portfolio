@@ -229,6 +229,10 @@ hr {
   color: white;
 }
 
+.work-title-desktop {
+  display: none;
+}
+
 .work-card-item h4 {
   font-family: "Crete Round", serif;
   font-weight: 400;
@@ -481,6 +485,18 @@ hr {
   #active-card .card-tags {
     display: none;
   }
+
+  .card-item4 {
+    background-image: url("images/works-images/card-item3-img.svg") !important;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #card-item5 {
+    background-image: url("images/works-images/card-item4-img.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
   .work-card-item {
     background-image: url("images/works-images/card-item2-img.svg");
     background-repeat: no-repeat;
@@ -489,6 +505,16 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: flex-start;
+  }
+  
+  .work-title-desktop {
+    display: block;
+    padding-left: 0;
+  }
+
+  .work-title-mobile {
+    display: none;
   }
 
   .work-card-item .card-tags {
