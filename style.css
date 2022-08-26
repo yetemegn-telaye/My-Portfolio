@@ -408,11 +408,11 @@ hr {
     display: none;
   }
 
-  .work-section{
+  .work-section {
     margin-left: 38px;
     margin-right: 38px;
   }
-  
+
   .work-section h2 {
     float: left;
     margin-right: 0;
@@ -472,6 +472,14 @@ hr {
     justify-content: flex-end;
   }
 
+  .work-card-item button {
+    display: none;
+  }
+
+  .contact-form button {
+    margin-left: 0;
+  }
+
   #active-card button {
     display: block;
   }
@@ -479,9 +487,15 @@ hr {
   #active-card h4 {
     display: none;
   }
+
   #active-card p {
     display: none;
   }
+
+  .work-card-item .card-tags {
+    gap: 12px;
+  }
+
   #active-card .card-tags {
     display: none;
   }
@@ -497,6 +511,7 @@ hr {
     background-repeat: no-repeat;
     background-position: center;
   }
+
   .work-card-item {
     background-image: url("images/works-images/card-item2-img.svg");
     background-repeat: no-repeat;
@@ -507,20 +522,12 @@ hr {
     justify-content: flex-end;
     align-items: flex-start;
   }
-  
-  .work-title-desktop {
+
+  .work-card-item .work-title-desktop {
     display: block;
-    padding-left: 0;
   }
 
-  .work-title-mobile {
-    display: none;
-  }
-
-  .work-card-item .card-tags {
-    gap: 12px;
-  }
-  .work-card-item button {
+  .work-card-item .work-title-mobile {
     display: none;
   }
 
@@ -537,6 +544,7 @@ hr {
   .about-illustration {
     display: none;
   }
+
   .about-illustration-desktop {
     display: block;
   }
@@ -552,35 +560,31 @@ hr {
     min-width: 100%;
     justify-content: space-between;
   }
- .footer-section .form-section {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 24px;
-  padding: 130px 142px;
- }
 
- .form-section h3 {
-  text-align: start;
-  
- }
+  .footer-section .form-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 130px 142px;
+  }
 
- .contact-form {
-  min-width: 65%;
- }
-  
- .contact-form button {
-  margin-left: 0;
- }
+  .form-section h3 {
+    text-align: start;
+  }
 
- .footer-social-icons {
-  padding: 1.563rem 33.75rem;
-}
+  .contact-form {
+    min-width: 65%;
+  }
 
-.footer-social-icons ul{
-  display: flex;
-  align-items: center;
-}
+  .footer-social-icons {
+    padding: 1.563rem 33.75rem;
+  }
+
+  .footer-social-icons ul {
+    display: flex;
+    align-items: center;
+  }
 }
 
 /* mobile version */
