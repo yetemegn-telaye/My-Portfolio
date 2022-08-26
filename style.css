@@ -599,6 +599,12 @@ hr {
     text-align: start;
   }
 
+  .form-section h3:hover {
+    transform: translateX(-9px);
+    transition: all 0.6s;
+    cursor: pointer;
+  }
+
   .contact-form {
     min-width: 65%;
   }
