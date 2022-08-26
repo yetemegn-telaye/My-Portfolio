@@ -403,14 +403,20 @@ hr {
   #toggle-btn {
     display: none;
   }
+
+  .work-section{
+    margin-left: 38px;
+    margin-right: 38px;
+  }
   
   .work-section h2 {
     float: left;
+    margin-right: 0;
   }
 
   .work-section hr {
     float: right;
-    width: 65%;
+    width: 70%;
     margin-top: 30px;
     background-color: #212121;
   }
@@ -438,11 +444,23 @@ hr {
     min-height: 448px;
   }
 
+  .first-card-desc {
+    padding-right: 99px;
+  }
+
+  .first-card-desc h4 {
+    font-size: 40px;
+  }
+
+  .first-card-desc p {
+    font-size: 20px;
+  }
+
   #active-card {
     background-image: url("images/works-images/active-card.svg");
     background-repeat: no-repeat;
     background-position: center;
-    border: 1px solid black;
+    border: 2px solid black;
     min-height: 435px;
     min-width: 370px;
     display: flex;
@@ -524,13 +542,13 @@ hr {
  .contact-form {
   min-width: 65%;
  }
-
+  
  .contact-form button {
-  float: left;
+  margin-left: 0;
  }
 
  .footer-social-icons {
-  padding: 25px 540px;
+  padding: 1.563rem 33.75rem;
 }
 
 .footer-social-icons ul{
