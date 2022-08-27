@@ -408,6 +408,23 @@ hr {
     display: none;
   }
 
+  .first-card .card-tags li {
+    margin-left: 0;
+    margin-right: 2px;
+  }
+
+  .work-card-item .card-tags li {
+    background: rgba(255, 255, 255, 0.24);
+    color: white;
+    border: none;
+    padding: 10px 12px;
+  }
+
+  .social-icons ul li:hover {
+    transform: scale(1.4);
+    transition: all 0.3s;
+  }
+
   .work-section {
     margin-left: 38px;
     margin-right: 38px;
@@ -467,11 +484,6 @@ hr {
     gap: 12px;
   }
 
-  .first-card .card-tags li {
-    margin-left: 0;
-    margin-right: 2px;
-  }
-
   #active-card {
     background-image: url("images/works-images/active-card.svg");
     background-repeat: no-repeat;
@@ -508,13 +520,6 @@ hr {
     gap: 12px;
     margin-left: 12px;
     margin-right: 0.5rem;
-  }
-
-  .work-card-item .card-tags li {
-    background: rgba(255, 255, 255, 0.24);
-    color: white;
-    border: none;
-    padding: 10px 12px;
   }
 
   #active-card .card-tags {
@@ -592,6 +597,12 @@ hr {
 
   .form-section h3 {
     text-align: start;
+  }
+
+  .form-section h3:hover {
+    transform: translateX(-9px);
+    transition: all 0.6s;
+    cursor: pointer;
   }
 
   .contact-form {
