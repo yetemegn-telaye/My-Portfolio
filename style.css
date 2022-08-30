@@ -62,7 +62,7 @@ header #logo-title {
 }
 
 .nav-links a:active {
-  color: #e05304;
+  color: #FFC857;
 }
 
 .headline-section {
@@ -100,7 +100,7 @@ header #logo-title {
 }
 
 .header-intro h1 {
-  color: #f55800;
+  color: #F55800;
   font-family: "Crete Round", serif;
   font-weight: 400;
   line-height: 82px;
@@ -190,7 +190,7 @@ hr {
   gap: 20px;
 }
 
-.about-tech-list h4 {
+.about-tech-list h3 {
   font-weight: 700;
   font-size: 32px;
   line-height: 49px;
@@ -233,7 +233,7 @@ hr {
   display: none;
 }
 
-.work-card-item h4 {
+.work-card-item h3 {
   font-family: "Crete Round", serif;
   font-weight: 400;
   font-size: 32px;
@@ -262,7 +262,7 @@ hr {
   color: #091e42;
 }
 
-.first-card-desc h4 {
+.first-card-desc h3 {
   font-family: "Crete Round", serif;
   font-weight: 400;
   font-size: 32px;
@@ -470,7 +470,7 @@ hr {
     padding-right: 99px;
   }
 
-  .first-card-desc h4 {
+  .first-card-desc h3 {
     font-size: 40px;
   }
 
@@ -508,7 +508,7 @@ hr {
     display: block;
   }
 
-  #active-card h4 {
+  #active-card h3 {
     display: none;
   }
 
