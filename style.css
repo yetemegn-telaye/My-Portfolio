@@ -88,6 +88,10 @@ header #logo-title {
   max-height: 769.27px;
 }
 
+.mobile-menu{
+  display: none;
+}
+
 .social-icons ul {
   display: flex;
   flex-direction: column;
@@ -407,7 +411,7 @@ hr {
   #toggle-btn {
     display: none;
   }
-
+  
   .first-card .card-tags li {
     margin-left: 0;
     margin-right: 2px;
