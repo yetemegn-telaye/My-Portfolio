@@ -1,13 +1,18 @@
 const hamburgerBtn = document.querySelector('#toggle-btn');
-let toggleMenu = document.querySelector('#menu');
-hamburgerBtn.addEventListener('click', function (){
-    toggleMenu.style.display = "block";
-});
-
+const toggleMenu = document.querySelector('#menu');
+const menuList = document.querySelectorAll('.menuItem');
 const closeBtn = document.querySelector('.close');
-closeBtn.addEventListener('click',function(){
-    toggleMenu.style.display = "none";
+
+hamburgerBtn.addEventListener('click', () => {
+  toggleMenu.style.display = 'block';
 });
 
+closeBtn.addEventListener('click', () => {
+  toggleMenu.style.display = 'none';
+});
 
-
+menuList.forEach((item) => {
+  item.addEventListener('click', () => {
+    toggleMenu.style.display = 'none';
+  });
+});
