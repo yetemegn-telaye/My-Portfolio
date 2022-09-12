@@ -7,4 +7,7 @@ hamburgerBtn.addEventListener('click', function (){
 const closeBtn = document.querySelector('.close');
 closeBtn.addEventListener('click',function(){
     toggleMenu.style.display = "none";
-})
+});
+
+
+
