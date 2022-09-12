@@ -57,6 +57,13 @@ header #logo-title {
   font-weight: 600;
 }
 
+.menu-content ul li a {
+  color: #fff5e1;
+  font-size: 32px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 .nav-links a:hover {
   color: #fff5e1;
 }
@@ -86,6 +93,42 @@ header #logo-title {
 .headline-img {
   max-width: 1003.13px;
   max-height: 769.27px;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #e7e7e7;
+}
+
+.menu-content {
+  padding: 24px;
+  width: 100%;
+  height: 93%;
+  background-color: #3c3a39;
+}
+
+.menu-content .close {
+  color: #6f6c6b;
+  float: right;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.menu-content ul {
+  padding-top: 52px;
+}
+
+.menu-content ul li {
+  list-style-type: none;
+  padding: 15px;
+  border-bottom: 1px solid #6f6c6b;
 }
 
 .social-icons ul {
