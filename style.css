@@ -168,6 +168,12 @@ header #logo-title {
 }
 
 /* Mobile First -mobile for middle section */
+#project{
+  display: none;
+}
+.project-content{
+  padding: 20px;
+}
 .work-section {
   padding: 120px 24px;
 }
