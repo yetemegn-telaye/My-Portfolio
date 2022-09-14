@@ -169,7 +169,7 @@ header #logo-title {
 }
 
 /* Mobile First -mobile for middle section */
-#project-popup{
+#project-popup {
   display: none;
   position: fixed;
   z-index: 1;
@@ -178,16 +178,18 @@ header #logo-title {
   min-width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: #979493;
+  background-color: rgb(160, 155, 153, 0.6);
   backdrop-filter: blur(5px);
 }
-.popup-content{
+
+.popup-content {
   padding: 30px;
   background-color: white;
   width: 95%;
   margin: 50px 20px;
   min-height: 90%;
 }
+
 .popup-content h2 {
   float: left;
   font-weight: 700;
@@ -198,22 +200,42 @@ header #logo-title {
 .popup-content .close {
   padding-top: 5px;
 }
+
+.card-tags {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12px;
+}
+
 .popup-content .card-tags {
   margin-top: 80px;
+}
+
+.popup-desc {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 24px;
+}
+
+#popup-img-desktop {
+  display: none;
 }
 
 .popup-detail {
   display: grid;
   grid-template-columns: auto;
-  gap: 14px;
+  gap: 20px;
 }
 
 .popup-btns {
   display: flex;
   margin-left: 0;
 }
+
 .popup-btns button {
   margin-right: 10px;
+  max-height: 52px;
+  padding: 5px;
 }
 
 .work-section {
@@ -319,7 +341,6 @@ hr {
   color: white;
 }
 
-
 .work-title-desktop {
   display: none;
 }
@@ -366,12 +387,6 @@ hr {
   font-size: 16px;
   font-weight: 400;
   padding: 12px 0;
-}
-
-.card-tags {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 12px;
 }
 
 .common-btn {
@@ -505,25 +520,32 @@ hr {
 
   .popup-content .card-tags {
     width: 30%;
-   margin-left: 0;
+    margin-left: 0;
   }
 
   .popup-desc {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 24px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 24px;
+  }
+
+  #popup-img-mobile {
+    display: none;
+  }
+
+  #popup-img-desktop {
+    display: block;
   }
 
   .popup-detail {
     display: grid;
     grid-template-columns: auto;
     gap: 60px;
+    align-content: space-between;
   }
 
-  .popup-btns button{
-    padding: 5px 12px;
-  }
- 
+
+
   .first-card .card-tags li {
     margin-left: 0;
     margin-right: 2px;
