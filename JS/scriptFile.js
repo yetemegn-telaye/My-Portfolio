@@ -1,9 +1,10 @@
 const hamburgerBtn = document.querySelector('#toggle-btn');
 const toggleMenu = document.querySelector('#menu');
 const menuList = document.querySelectorAll('.menuItem');
-const closeBtn = document.querySelectorAll('.close');
-const projectPopup = document.querySelector('#project');
+const projectPopup = document.querySelector('#project-popup');
 const workContainer = document.querySelector('.work-card-container');
+
+ const closeBtn = document.querySelectorAll('.close');
 
 const projectDetails = [
   {
@@ -104,13 +105,6 @@ hamburgerBtn.addEventListener('click', () => {
   toggleMenu.style.display = 'block';
 });
 
-closeBtn.forEach(close=>{
-  
-close.addEventListener('click', () => {
-  toggleMenu.style.display = 'none';
-  projectPopup.style.display='none'
-})
-});
 
 menuList.forEach((item) => {
   item.addEventListener('click', () => {
@@ -118,7 +112,7 @@ menuList.forEach((item) => {
   });
 });
 
-
+// Dynamically creating work cards for the work container
 projectDetails.forEach((project,index)=>{
   let divWorkCard = document.createElement('div');
   let divFirstCard = document.createElement('div');
@@ -126,13 +120,13 @@ projectDetails.forEach((project,index)=>{
   let divFirstCardImg= document.createElement('div');
   let x= window.matchMedia("(min-width: 768px)");
  
-
+  
   let ul = document.createElement('ul');
   ul.className='card-tags';
   let h3 = document.createElement('h3');
   let p= document.createElement('p');
   let button = document.createElement('button');
-  let list = button.classList;
+  button.className='project-btn';
 
   divFirstCardImg.id='first-card-img';
   divFirstCardDesc.className='first-card-desc';
@@ -141,12 +135,13 @@ projectDetails.forEach((project,index)=>{
   p.textContent=project.projDescription;
   
   button.textContent="See Project";
-
+ 
   
 
   if(index==0){
     divFirstCard.className='first-card';
-    list.add('common-btn');
+    button.className="common-btn";
+    button.id="proj-btn";
     workContainer.appendChild(divFirstCard);
     divFirstCard.appendChild(divFirstCardImg);
     divFirstCard.appendChild(divFirstCardDesc);
@@ -166,7 +161,6 @@ projectDetails.forEach((project,index)=>{
      divWorkCard.id='active-card';
      divWorkCard.style.backgroundImage=project.projImage;
      workContainer.appendChild(divWorkCard);
-     list.add('project-btn');
      divWorkCard.appendChild(button);
     }
     else{
@@ -176,14 +170,13 @@ projectDetails.forEach((project,index)=>{
       divWorkCard.appendChild(h3);
       divWorkCard.appendChild(p);
       divWorkCard.appendChild(ul);
-      list.add('project-btn');
       divWorkCard.appendChild(button);
     }  
   }
   else{
     divWorkCard.className='work-card-item'; 
     divWorkCard.style.backgroundImage= project.projImage;
-
+    
     project.projTechnologies.forEach(techItem => {
       let li= document.createElement('li');
       li.textContent=techItem;
@@ -195,21 +188,37 @@ projectDetails.forEach((project,index)=>{
     divWorkCard.appendChild(h3);
     divWorkCard.appendChild(p);
     divWorkCard.appendChild(ul);
-    list.add('project-btn');
     divWorkCard.appendChild(button);
-
+    if(x.matches){
+      divWorkCard.addEventListener('click', function (){
+        projectPopup.style.display="block";
+      })
+    }
   }
-   
   
 });
 
-const projectBtn = document.querySelectorAll('.project-btn');
+
+
+const firstProjBtn = document.querySelector('#proj-btn');
+const projectBtn = document.querySelectorAll('.project-btn'); 
+closeBtn.forEach(close=>{
+  close.addEventListener('click', () => {
+    toggleMenu.style.display = 'none';
+    
+    projectPopup.style.display='none';
+  })
+  });
 
 projectBtn.forEach(project=>{
   project.addEventListener('click',()=>{
     projectPopup.style.display='block';
   })
 });
+
+firstProjBtn.addEventListener('click', function(){
+  projectPopup.style.display='block';
+})
 
 
 
