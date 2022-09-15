@@ -502,6 +502,17 @@ hr {
   font-family: 'Inter', sans-serif;
 }
 
+#error-msg {
+  display: none;
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 6px;
+  margin-left: 0;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  min-width: 100%;
+}
+
 .contact-form textarea {
   min-width: 100%;
   border: none;
