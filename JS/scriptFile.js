@@ -209,19 +209,17 @@ firstProjBtn.addEventListener('click', () => {
   projectPopup.style.display = 'block';
 });
 
-let form = document.querySelector("#contactForm");
-const errorMsg = document.querySelector("#error-msg");
-form.addEventListener('submit', function(event){
+const form = document.querySelector('#contactForm');
+const errorMsg = document.querySelector('#error-msg');
+form.addEventListener('submit', (event) => {
   event.preventDefault();
-    let emailInput = form.elements["email"];
-    let lowerEmailInput = emailInput.value.toLowerCase();
-  
-    if(emailInput.value===lowerEmailInput){
-      form.submit();
-    }
-    else
-      {
-        errorMsg.innerHTML="<p>Please enter only in lower case format</p>";
-        errorMsg.style.display="block";
-      }
-})
+  const emailInput = form.elements.email;
+  const lowerEmailInput = emailInput.value.toLowerCase();
+
+  if (emailInput.value === lowerEmailInput) {
+    form.submit();
+  } else {
+    errorMsg.innerHTML = '<p>Please enter only in lower case format</p>';
+    errorMsg.style.display = 'block';
+  }
+});

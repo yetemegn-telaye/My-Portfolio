@@ -504,7 +504,7 @@ hr {
 
 #error-msg {
   display: none;
-  border: 1px solid red;
+  border: 2px solid red;
   padding: 10px;
   border-radius: 6px;
   margin-left: 0;
