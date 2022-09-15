@@ -209,6 +209,7 @@ firstProjBtn.addEventListener('click', () => {
   projectPopup.style.display = 'block';
 });
 
+//Email validation
 const form = document.querySelector('#contactForm');
 const errorMsg = document.querySelector('#error-msg');
 form.addEventListener('submit', (event) => {
@@ -223,3 +224,30 @@ form.addEventListener('submit', (event) => {
     errorMsg.style.display = 'block';
   }
 });
+
+//Preserve form data
+let contactInputs = document.querySelectorAll('.contactInput');
+let storeContact = {};
+
+for(let i=0; i<contactInputs.length;i++){
+  contactInputs[i].addEventListener('change',function(event){
+    storeContact[contactInputs[i].name]= event.target.value;
+    let data= JSON.stringify(storeContact);
+    localStorage.setItem('contactData',data);
+  });
+}
+
+let preserveData =localStorage.getItem('contactData')
+let preservedContact = JSON.parse(preserveData);
+
+contactInputs.forEach(inpt=>{
+  if(inpt.name=="name"){
+    inpt.value=preservedContact.name;
+  }
+  else if(inpt.name=="email"){
+    inpt.value=preservedContact.email;
+  }
+  else if(inpt.name=="message"){
+    inpt.value=preservedContact.message;
+  }
+})
