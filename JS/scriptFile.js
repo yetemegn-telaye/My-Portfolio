@@ -208,3 +208,20 @@ projectBtn.forEach((project) => {
 firstProjBtn.addEventListener('click', () => {
   projectPopup.style.display = 'block';
 });
+
+let form = document.querySelector("#contactForm");
+const errorMsg = document.querySelector("#error-msg");
+form.addEventListener('submit', function(event){
+  event.preventDefault();
+    let emailInput = form.elements["email"];
+    let lowerEmailInput = emailInput.value.toLowerCase();
+  
+    if(emailInput.value===lowerEmailInput){
+      form.submit();
+    }
+    else
+      {
+        errorMsg.innerHTML="<p>Only lower case is required</p>";
+        errorMsg.style.display="block";
+      }
+})
