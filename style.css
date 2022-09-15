@@ -508,6 +508,8 @@ hr {
   padding: 10px;
   border-radius: 6px;
   margin-left: 0;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
   min-width: 100%;
 }
 

@@ -221,7 +221,7 @@ form.addEventListener('submit', function(event){
     }
     else
       {
-        errorMsg.innerHTML="<p>Only lower case is required</p>";
+        errorMsg.innerHTML="<p>Please enter only in lower case format</p>";
         errorMsg.style.display="block";
       }
 })
