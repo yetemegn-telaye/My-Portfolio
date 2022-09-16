@@ -209,6 +209,7 @@ firstProjBtn.addEventListener('click', () => {
   projectPopup.style.display = 'block';
 });
 
+// Email validation
 const form = document.querySelector('#contactForm');
 const errorMsg = document.querySelector('#error-msg');
 form.addEventListener('submit', (event) => {
@@ -221,5 +222,28 @@ form.addEventListener('submit', (event) => {
   } else {
     errorMsg.innerHTML = '<p>Please enter only in lower case format</p>';
     errorMsg.style.display = 'block';
+  }
+});
+
+// Preserve form data
+const contactInputs = document.querySelectorAll('.contactInput');
+const storeContact = {};
+
+for (let i = 0; i < contactInputs.length; i += 1) {
+  contactInputs[i].addEventListener('change', (event) => {
+    storeContact[contactInputs[i].name] = event.target.value;
+    localStorage.setItem('contactData', JSON.stringify(storeContact));
+  });
+}
+
+const preservedContact = JSON.parse(localStorage.getItem('contactData'));
+
+contactInputs.forEach((inpt) => {
+  if (inpt.name === 'name') {
+    inpt.value = preservedContact.name;
+  } else if (inpt.name === 'email') {
+    inpt.value = preservedContact.email;
+  } else if (inpt.name === 'message') {
+    inpt.value = preservedContact.message;
   }
 });
