@@ -232,13 +232,11 @@ let storeContact = {};
 for(let i=0; i<contactInputs.length;i++){
   contactInputs[i].addEventListener('change',function(event){
     storeContact[contactInputs[i].name]= event.target.value;
-    let data= JSON.stringify(storeContact);
-    localStorage.setItem('contactData',data);
+    localStorage.setItem('contactData',JSON.stringify(storeContact));
   });
 }
 
-let preserveData =localStorage.getItem('contactData')
-let preservedContact = JSON.parse(preserveData);
+let preservedContact = JSON.parse(localStorage.getItem('contactData'));
 
 contactInputs.forEach(inpt=>{
   if(inpt.name=="name"){
