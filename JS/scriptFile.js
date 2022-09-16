@@ -209,7 +209,7 @@ firstProjBtn.addEventListener('click', () => {
   projectPopup.style.display = 'block';
 });
 
-//Email validation
+// Email validation
 const form = document.querySelector('#contactForm');
 const errorMsg = document.querySelector('#error-msg');
 form.addEventListener('submit', (event) => {
@@ -225,27 +225,25 @@ form.addEventListener('submit', (event) => {
   }
 });
 
-//Preserve form data
-let contactInputs = document.querySelectorAll('.contactInput');
-let storeContact = {};
+// Preserve form data
+const contactInputs = document.querySelectorAll('.contactInput');
+const storeContact = {};
 
-for(let i=0; i<contactInputs.length;i++){
-  contactInputs[i].addEventListener('change',function(event){
-    storeContact[contactInputs[i].name]= event.target.value;
-    localStorage.setItem('contactData',JSON.stringify(storeContact));
+for (let i = 0; i < contactInputs.length; i += 1) {
+  contactInputs[i].addEventListener('change', (event) => {
+    storeContact[contactInputs[i].name] = event.target.value;
+    localStorage.setItem('contactData', JSON.stringify(storeContact));
   });
 }
 
-let preservedContact = JSON.parse(localStorage.getItem('contactData'));
+const preservedContact = JSON.parse(localStorage.getItem('contactData'));
 
-contactInputs.forEach(inpt=>{
-  if(inpt.name=="name"){
-    inpt.value=preservedContact.name;
+contactInputs.forEach((inpt) => {
+  if (inpt.name === 'name') {
+    inpt.value = preservedContact.name;
+  } else if (inpt.name === 'email') {
+    inpt.value = preservedContact.email;
+  } else if (inpt.name === 'message') {
+    inpt.value = preservedContact.message;
   }
-  else if(inpt.name=="email"){
-    inpt.value=preservedContact.email;
-  }
-  else if(inpt.name=="message"){
-    inpt.value=preservedContact.message;
-  }
-})
+});
