@@ -1,5 +1,6 @@
 const hamburgerBtn = document.querySelector('#toggle-btn');
 const toggleMenu = document.querySelector('#menu');
+
 const menuList = document.querySelectorAll('.menuItem');
 const projectPopup = document.querySelector('#project-popup');
 const workContainer = document.querySelector('.work-card-container');
@@ -213,11 +214,12 @@ firstProjBtn.addEventListener('click', () => {
 const form = document.querySelector('#contactForm');
 const errorMsg = document.querySelector('#error-msg');
 form.addEventListener('submit', (event) => {
-  event.preventDefault();
+  
   const emailInput = form.elements.email;
   const lowerEmailInput = emailInput.value.toLowerCase();
 
   if (emailInput.value === lowerEmailInput) {
+    event.preventDefault();
     form.submit();
   } else {
     errorMsg.innerHTML = '<p>Please enter only in lower case format</p>';
@@ -229,7 +231,7 @@ form.addEventListener('submit', (event) => {
 const contactInputs = document.querySelectorAll('.contactInput');
 const storeContact = {};
 
-for (let i = 0; i < contactInputs.length; i += 1) {
+for (let i = 1; i < contactInputs.length; i += 1) {
   contactInputs[i].addEventListener('change', (event) => {
     storeContact[contactInputs[i].name] = event.target.value;
     localStorage.setItem('contactData', JSON.stringify(storeContact));
