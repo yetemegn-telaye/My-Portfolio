@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+ --dark-color: #0D3B66;
+ --secondary-color: #FF6B00;
+  --accent-color: #FAF0CA;
+  --text-color: white;
+}
 
 header {
   position: sticky;
@@ -11,9 +17,9 @@ header {
   max-width: 100%;
   justify-content: space-between;
   align-items: center;
-  height: 4rem;
-  background-color: #3e3c3c;
-  color: white;
+  height: 5rem;
+  background-color: var(--dark-color);
+  border-bottom: 1px solid var(--accent-color);
   font-family: "Inter", sans-serif;
   font-style: normal;
 }
@@ -23,7 +29,7 @@ header #logo-title {
   font-weight: 700;
   text-decoration: none;
   margin-right: 150px;
-  color: white;
+  color: var(--text-color);
 }
 
 .nav-links {
@@ -41,7 +47,7 @@ header #logo-title {
 .card-tags li {
   background: rgba(255, 255, 255, 0.24);
   padding: 6px;
-  border: 1px solid gray;
+  border: 1px solid var(--text-color);
   list-style-type: none;
 }
 
@@ -53,20 +59,20 @@ header #logo-title {
 
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
   font-size: 0.938rem;
   font-weight: 600;
 }
 
 .menu-content ul li a {
-  color: #fff5e1;
+  color: var(--text-color);
   font-size: 32px;
   font-weight: 700;
   text-decoration: none;
 }
 
 .nav-links a:hover {
-  color: #fff5e1;
+  color: var(--secondary-color);
 }
 
 .nav-links a:active {
@@ -78,7 +84,7 @@ header #logo-title {
   align-items: center;
   justify-content: flex-start;
   max-width: 100%;
-  background-color: #1c1a19;
+  background-color: var(--dark-color);
   color: white;
 }
 
@@ -144,7 +150,7 @@ header #logo-title {
 }
 
 .header-intro h1 {
-  color: #f55800;
+  color: var(--accent-color);
   font-family: "Crete Round", serif;
   font-weight: 400;
   line-height: 82px;
@@ -284,7 +290,7 @@ hr {
   justify-content: center;
   gap: 10px;
   margin-top: 100px;
-  background-color: #1c1a19;
+  background-color: var(--dark-color);
   color: white;
   padding-top: 120px;
   width: 100%;
@@ -295,7 +301,7 @@ hr {
   font-weight: 400;
   font-size: 72px;
   line-height: 88px;
-  color: #ff6b00;
+  color: var(--accent-color);
   padding: 0 24px;
 }
 
@@ -323,6 +329,7 @@ hr {
 
 .about-section hr {
   width: 100%;
+  color: var(--accent-color);
 }
 
 .about-tech-list {
