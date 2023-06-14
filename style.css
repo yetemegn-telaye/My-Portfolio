@@ -2,6 +2,7 @@
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 :root {
  --dark-color: #0D3B66;
@@ -165,7 +166,6 @@ header #logo-title {
 }
 
 .header-intro p {
-  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
