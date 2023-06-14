@@ -1,40 +1,15 @@
 const hamburgerBtn = document.querySelector('#toggle-btn');
 const toggleMenu = document.querySelector('#menu');
 const menuList = document.querySelectorAll('.menuItem');
-const projectPopup = document.querySelector('#project-popup');
+// const projectPopup = document.querySelector('#project-popup');
 const workContainer = document.querySelector('.work-card-container');
 
-const closeBtn = document.querySelectorAll('.close');
+const closeBtn = document.querySelector('.close');
+closeBtn.addEventListener('click', () => {
+      toggleMenu.style.display = 'none';
+   });
 
 const projectDetails = [
-  {
-    projTitle: 'Multi-Post Stories',
-    projDescription: ' A daily selection of privately personalized reads; no accountsor sign-ups required. has been the industrys standard dummytext ever since the 1500s, when an unknown printer took astandard dummy text.',
-    projImage: '',
-    projImageMobile: "url('images/works-images/card-item3-img.svg')",
-    projTechnologies: [
-      'Css',
-      'html',
-      'bootstrap',
-      'Ruby',
-    ],
-    projLink: 'http://localhost:5501/',
-    projSource: 'https://github.com/yetemegn-telaye/My-Portfolio',
-  },
-  {
-    projTitle: 'Data Dashboard',
-    projDescription: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry',
-    projImage: "url('images/works-images/active-card.svg')",
-    projImageMobile: "url('images/works-images/card-item3-img.svg')",
-    projTechnologies: [
-      'html',
-      'bootstrap',
-      'Ruby',
-    ],
-    projLink: 'http://localhost:5501/',
-    projSource: 'https://github.com/yetemegn-telaye/My-Portfolio',
-  },
-
   {
     projTitle: 'Data Dashboard Healthcare',
     projDescription: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry',
@@ -100,6 +75,8 @@ const projectDetails = [
   },
 ];
 
+let workCard = '';
+
 hamburgerBtn.addEventListener('click', () => {
   toggleMenu.style.display = 'block';
 });
@@ -111,103 +88,118 @@ menuList.forEach((item) => {
 });
 
 // Dynamically creating work cards for the work container
-projectDetails.forEach((project, index) => {
-  const divWorkCard = document.createElement('div');
-  const divFirstCard = document.createElement('div');
-  const divFirstCardDesc = document.createElement('div');
-  const divFirstCardImg = document.createElement('div');
-  const x = window.matchMedia('(min-width: 768px)');
+function displayWorkCard(data) {
+  data.forEach((project)=>{
+    workCard += `
+    <div class="work-card-item" style="background-image: ${project.projImage}">
+      <h3>${project.projTitle}</h3>
+      <p>${project.projDescription}</p>
+      <button class="common-btn">See Project</button>
+    </div>
 
-  const ul = document.createElement('ul');
-  ul.className = 'card-tags';
-  const h3 = document.createElement('h3');
-  const p = document.createElement('p');
-  const button = document.createElement('button');
-  button.className = 'project-btn';
+    `;
+    workContainer.innerHTML= workCard;
+   
+  })
+}
+displayWorkCard(projectDetails);
+// projectDetails.forEach((project, index) => {
+//   const divWorkCard = document.createElement('div');
+//   const divFirstCard = document.createElement('div');
+//   const divFirstCardDesc = document.createElement('div');
+//   const divFirstCardImg = document.createElement('div');
+  
 
-  divFirstCardImg.id = 'first-card-img';
-  divFirstCardDesc.className = 'first-card-desc';
+//   const ul = document.createElement('ul');
+//   ul.className = 'card-tags';
+//   const h3 = document.createElement('h3');
+//   const p = document.createElement('p');
+//   const button = document.createElement('button');
+//   button.className = 'project-btn';
 
-  h3.textContent = project.projTitle;
-  p.textContent = project.projDescription;
+//   divFirstCardImg.id = 'first-card-img';
+//   divFirstCardDesc.className = 'first-card-desc';
 
-  button.textContent = 'See Project';
+//   h3.textContent = project.projTitle;
+//   p.textContent = project.projDescription;
 
-  if (index === 0) {
-    divFirstCard.className = 'first-card';
-    button.className = 'common-btn';
-    button.id = 'proj-btn';
-    workContainer.appendChild(divFirstCard);
-    divFirstCard.appendChild(divFirstCardImg);
-    divFirstCard.appendChild(divFirstCardDesc);
-    divFirstCardDesc.appendChild(h3);
-    divFirstCardDesc.appendChild(p);
+//   button.textContent = 'See Project';
 
-    project.projTechnologies.forEach((techItem) => {
-      const li = document.createElement('li');
-      li.textContent = techItem;
-      ul.appendChild(li);
-    });
-    divFirstCardDesc.appendChild(ul);
-    divFirstCardDesc.appendChild(button);
-  } else if (index === 1) {
-    if (x.matches) {
-      divWorkCard.id = 'active-card';
-      divWorkCard.style.backgroundImage = project.projImage;
-      workContainer.appendChild(divWorkCard);
-      divWorkCard.appendChild(button);
-    } else {
-      divWorkCard.className = 'work-card-item';
-      divWorkCard.style.backgroundImage = project.projImageMobile;
-      workContainer.appendChild(divWorkCard);
-      divWorkCard.appendChild(h3);
-      divWorkCard.appendChild(p);
-      divWorkCard.appendChild(ul);
-      divWorkCard.appendChild(button);
-    }
-  } else {
-    divWorkCard.className = 'work-card-item';
-    divWorkCard.style.backgroundImage = project.projImage;
+//   if (index === 0) {
+//     divFirstCard.className = 'first-card';
+//     button.className = 'common-btn';
+//     button.id = 'proj-btn';
+//     workContainer.appendChild(divFirstCard);
+//     divFirstCard.appendChild(divFirstCardImg);
+//     divFirstCard.appendChild(divFirstCardDesc);
+//     divFirstCardDesc.appendChild(h3);
+//     divFirstCardDesc.appendChild(p);
 
-    project.projTechnologies.forEach((techItem) => {
-      const li = document.createElement('li');
-      li.textContent = techItem;
-      ul.appendChild(li);
-    });
+//     project.projTechnologies.forEach((techItem) => {
+//       const li = document.createElement('li');
+//       li.textContent = techItem;
+//       ul.appendChild(li);
+//     });
+//     divFirstCardDesc.appendChild(ul);
+//     divFirstCardDesc.appendChild(button);
+//   } else if (index === 1) {
+//     if (x.matches) {
+//       divWorkCard.id = 'active-card';
+//       divWorkCard.style.backgroundImage = project.projImage;
+//       workContainer.appendChild(divWorkCard);
+//       divWorkCard.appendChild(button);
+//     } else {
+//       divWorkCard.className = 'work-card-item';
+//       divWorkCard.style.backgroundImage = project.projImageMobile;
+//       workContainer.appendChild(divWorkCard);
+//       divWorkCard.appendChild(h3);
+//       divWorkCard.appendChild(p);
+//       divWorkCard.appendChild(ul);
+//       divWorkCard.appendChild(button);
+//     }
+//   } else {
+//     divWorkCard.className = 'work-card-item';
+//     divWorkCard.style.backgroundImage = project.projImage;
 
-    workContainer.appendChild(divWorkCard);
+//     project.projTechnologies.forEach((techItem) => {
+//       const li = document.createElement('li');
+//       li.textContent = techItem;
+//       ul.appendChild(li);
+//     });
 
-    divWorkCard.appendChild(h3);
-    divWorkCard.appendChild(p);
-    divWorkCard.appendChild(ul);
-    divWorkCard.appendChild(button);
-    if (x.matches) {
-      divWorkCard.addEventListener('click', () => {
-        projectPopup.style.display = 'block';
-      });
-    }
-  }
-});
+    
 
-const firstProjBtn = document.querySelector('#proj-btn');
-const projectBtn = document.querySelectorAll('.project-btn');
-closeBtn.forEach((close) => {
-  close.addEventListener('click', () => {
-    toggleMenu.style.display = 'none';
+//     divWorkCard.appendChild(h3);
+//     divWorkCard.appendChild(p);
+//     divWorkCard.appendChild(ul);
+//     divWorkCard.appendChild(button);
+//     if (x.matches) {
+//       divWorkCard.addEventListener('click', () => {
+//         projectPopup.style.display = 'block';
+//       });
+//     }
+//   }
+// });
 
-    projectPopup.style.display = 'none';
-  });
-});
+// const firstProjBtn = document.querySelector('#proj-btn');
+// const projectBtn = document.querySelectorAll('.project-btn');
+// closeBtn.forEach((close) => {
+//   close.addEventListener('click', () => {
+//     toggleMenu.style.display = 'none';
 
-projectBtn.forEach((project) => {
-  project.addEventListener('click', () => {
-    projectPopup.style.display = 'block';
-  });
-});
+//     projectPopup.style.display = 'none';
+//   });
+// });
 
-firstProjBtn.addEventListener('click', () => {
-  projectPopup.style.display = 'block';
-});
+// projectBtn.forEach((project) => {
+//   project.addEventListener('click', () => {
+//     projectPopup.style.display = 'block';
+//   });
+// });
+
+// firstProjBtn.addEventListener('click', () => {
+//   projectPopup.style.display = 'block';
+// });
 
 // Email validation
 const form = document.querySelector('#contactForm');
