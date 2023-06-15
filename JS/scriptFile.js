@@ -1,7 +1,6 @@
 const hamburgerBtn = document.querySelector('#toggle-btn');
 const toggleMenu = document.querySelector('#menu');
 const menuList = document.querySelectorAll('.menuItem');
-// const projectPopup = document.querySelector('#project-popup');
 const workContainer = document.querySelector('.work-card-container');
 
 const closeBtn = document.querySelector('.close');
@@ -103,103 +102,7 @@ function displayWorkCard(data) {
   })
 }
 displayWorkCard(projectDetails);
-// projectDetails.forEach((project, index) => {
-//   const divWorkCard = document.createElement('div');
-//   const divFirstCard = document.createElement('div');
-//   const divFirstCardDesc = document.createElement('div');
-//   const divFirstCardImg = document.createElement('div');
-  
 
-//   const ul = document.createElement('ul');
-//   ul.className = 'card-tags';
-//   const h3 = document.createElement('h3');
-//   const p = document.createElement('p');
-//   const button = document.createElement('button');
-//   button.className = 'project-btn';
-
-//   divFirstCardImg.id = 'first-card-img';
-//   divFirstCardDesc.className = 'first-card-desc';
-
-//   h3.textContent = project.projTitle;
-//   p.textContent = project.projDescription;
-
-//   button.textContent = 'See Project';
-
-//   if (index === 0) {
-//     divFirstCard.className = 'first-card';
-//     button.className = 'common-btn';
-//     button.id = 'proj-btn';
-//     workContainer.appendChild(divFirstCard);
-//     divFirstCard.appendChild(divFirstCardImg);
-//     divFirstCard.appendChild(divFirstCardDesc);
-//     divFirstCardDesc.appendChild(h3);
-//     divFirstCardDesc.appendChild(p);
-
-//     project.projTechnologies.forEach((techItem) => {
-//       const li = document.createElement('li');
-//       li.textContent = techItem;
-//       ul.appendChild(li);
-//     });
-//     divFirstCardDesc.appendChild(ul);
-//     divFirstCardDesc.appendChild(button);
-//   } else if (index === 1) {
-//     if (x.matches) {
-//       divWorkCard.id = 'active-card';
-//       divWorkCard.style.backgroundImage = project.projImage;
-//       workContainer.appendChild(divWorkCard);
-//       divWorkCard.appendChild(button);
-//     } else {
-//       divWorkCard.className = 'work-card-item';
-//       divWorkCard.style.backgroundImage = project.projImageMobile;
-//       workContainer.appendChild(divWorkCard);
-//       divWorkCard.appendChild(h3);
-//       divWorkCard.appendChild(p);
-//       divWorkCard.appendChild(ul);
-//       divWorkCard.appendChild(button);
-//     }
-//   } else {
-//     divWorkCard.className = 'work-card-item';
-//     divWorkCard.style.backgroundImage = project.projImage;
-
-//     project.projTechnologies.forEach((techItem) => {
-//       const li = document.createElement('li');
-//       li.textContent = techItem;
-//       ul.appendChild(li);
-//     });
-
-    
-
-//     divWorkCard.appendChild(h3);
-//     divWorkCard.appendChild(p);
-//     divWorkCard.appendChild(ul);
-//     divWorkCard.appendChild(button);
-//     if (x.matches) {
-//       divWorkCard.addEventListener('click', () => {
-//         projectPopup.style.display = 'block';
-//       });
-//     }
-//   }
-// });
-
-// const firstProjBtn = document.querySelector('#proj-btn');
-// const projectBtn = document.querySelectorAll('.project-btn');
-// closeBtn.forEach((close) => {
-//   close.addEventListener('click', () => {
-//     toggleMenu.style.display = 'none';
-
-//     projectPopup.style.display = 'none';
-//   });
-// });
-
-// projectBtn.forEach((project) => {
-//   project.addEventListener('click', () => {
-//     projectPopup.style.display = 'block';
-//   });
-// });
-
-// firstProjBtn.addEventListener('click', () => {
-//   projectPopup.style.display = 'block';
-// });
 
 // Email validation
 const form = document.querySelector('#contactForm');
